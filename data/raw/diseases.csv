@@ -1,0 +1,41 @@
+disease_id,disease_name
+DIS_001,Cancer
+DIS_002,Diabetes
+DIS_003,Hypertension
+DIS_004,Heart Disease
+DIS_005,Kidney Failure
+DIS_006,Stroke
+DIS_007,Asthma
+DIS_008,Tuberculosis
+DIS_009,Liver Disease
+DIS_010,Anemia
+DIS_011,Hepatitis B
+DIS_012,Hepatitis C
+DIS_013,Chronic Kidney Disease
+DIS_014,Pneumonia
+DIS_015,Bronchitis
+DIS_016,Arthritis
+DIS_017,Thyroid Disorder
+DIS_018,Malaria
+DIS_019,Typhoid
+DIS_020,Dengue
+DIS_021,COVID-19
+DIS_022,Epilepsy
+DIS_023,Depression
+DIS_024,Anxiety Disorder
+DIS_025,Obesity
+DIS_026,Osteoporosis
+DIS_027,Gastritis
+DIS_028,Ulcer
+DIS_029,Migraine
+DIS_030,Cataract
+DIS_031,Glaucoma
+DIS_032,Skin Infection
+DIS_033,Burns
+DIS_034,Fracture
+DIS_035,Appendicitis
+DIS_036,Gallstones
+DIS_037,Prostate Disorder
+DIS_038,Leukemia
+DIS_039,Lymphoma
+DIS_040,COPD
