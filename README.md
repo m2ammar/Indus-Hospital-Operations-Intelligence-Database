@@ -5,16 +5,16 @@
 <h1 align="center">🏥 Indus Hospital Operations Intelligence Platform</h1>
 
 <p align="center">
-  <strong>An End-to-End Healthcare Data Engineering & Business Intelligence Solution</strong>
+  <strong>End-to-End Healthcare Relational Database Architecture & SQL Analytics Engine</strong>
 </p>
 
 <p align="center">
-  A production-grade relational database architecture, advanced SQL analytical engine, and executive Tableau dashboard suite designed to optimize hospital operations, bed capacity, and patient outcomes.
+  A production-grade MySQL database schema and analytical SQL suite built during a 40-hour internship to model clinical workflows, patient flow, ward utilization, and operational capacity.
 </p>
 
 <p align="center">
   <a href="#-tech-stack">
-    <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+    <img src="https://img.shields.io/badge/Database-MySQL_8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   </a>
   <a href="#-tech-stack">
     <img src="https://img.shields.io/badge/Language-Advanced_SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" />
@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/badge/Visualization-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
   </a>
   <a href="#-tech-stack">
-    <img src="https://img.shields.io/badge/Domain-Healthcare_Analytics-008080?style=for-the-badge&logo=bandcamp&logoColor=white" alt="Healthcare" />
+    <img src="https://img.shields.io/badge/Domain-Healthcare_Data_Engineering-008080?style=for-the-badge&logo=bandcamp&logoColor=white" alt="Healthcare Analytics" />
   </a>
   <a href="#-license">
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
@@ -37,122 +37,95 @@
 ## 📋 Table of Contents
 
 - [📌 Project Overview](#-project-overview)
-- [✨ Key Features](#-key-features)
+- [✨ Core Capabilities](#-core-capabilities)
 - [🛠 Tech Stack](#-tech-stack)
 - [🏗 System Architecture](#-system-architecture)
-- [📐 Database Schema & Data Model](#-database-schema--data-model)
+- [📐 Database Schema & Entity Relationships](#-database-schema--entity-relationships)
 - [💻 Advanced SQL Analytics](#-advanced-sql-analytics)
-- [📊 Executive Dashboards & Visualizations](#-executive-dashboards--visualizations)
-- [📈 Key Business Insights & Metrics](#-key-business-insights--metrics)
-- [📁 Repository Structure](#-repository-structure)
-- [⚡ Installation & Setup Guide](#-installation--setup-guide)
-- [🔒 Data Governance & Patient Privacy](#-data-governance--patient-privacy)
-- [🙏 Acknowledgements & Context](#-acknowledgements--context)
+- [📊 Operations Dashboard & Visualization](#-operations-dashboard--visualization)
+- [⚡ Setup & Execution Guide](#-setup--execution-guide)
+- [🔒 Data Privacy & Compliance](#-data-privacy--compliance)
+- [🙏 Internship Context & Acknowledgements](#-internship-context--acknowledgements)
 - [👤 Author](#-author)
 
 ---
 
 ## 📌 Project Overview
 
-Healthcare systems face immense operational challenges in managing inpatient flow, optimizing bed occupancy rates, balancing emergency vs. elective admissions, and tracking financial metrics across complex care departments.
+Healthcare systems face complex operational challenges in tracking patient movement across emergency admissions, outpatient visits, inpatient ward capacity, surgical queues, and donor allocations.
 
-The **Indus Hospital Operations Intelligence Platform** is an end-to-end data engineering and operational analytics project developed during a 40-hour internship targeting **Indus Hospital & Health Network (IHHN)** operational workflows. The platform ingests, normalizes, and analyzes hospital administration data to generate actionable insights for healthcare administrators, medical directors, and financial planners.
+The **Indus Hospital Operations Intelligence Platform** is a normalized relational database and analytical reporting project developed during a 40-hour internship. The platform models core hospital operations to analyze bed availability, emergency intake patterns, outpatient volume, and patient length of stay across clinical departments.
 
-
-┌───────────────────────────────────────────────────────────────────────────────────┐
-│                          OPERATIONAL CHALLENGE & SOLUTION                         │
-├─────────────────────────────────────────┬─────────────────────────────────────────┤
-│ 🚨 CHALLENGE                            │ 🎯 PLATFORM SOLUTION                    │
-├─────────────────────────────────────────┼─────────────────────────────────────────┤
-│ • High ICU & Emergency Bed Overcrowding │ • Real-Time Ward Occupancy Engine       │
-│ • Unpredictable Length of Stay (LOS)    │ • Window-Function Patient Flow Analysis │
-│ • Manual Billing & Revenue Bottlenecks  │ • Automated Financial Distribution KPIs │
-└─────────────────────────────────────────┴─────────────────────────────────────────┘
-
-
-### Core Objectives
-* 🚨 **Operational Visibility:** Reduce patient throughput bottlenecks by monitoring admission patterns, peak discharge times, and average Length of Stay (LOS).
-* 🛏️ **Resource & Capacity Optimization:** Track real-time ward and bed occupancy rates to mitigate overcrowding in critical departments (ICU, Emergency, Surgical).
-* 💳 **Financial Performance & Billing:** Analyze billing distributions, insurance vs. self-pay trends, and departmental revenue efficiency.
-* 🎯 **Data-Driven Decision Making:** Deliver interactive, multi-page executive dashboards engineered for high visual clarity and high-contrast accessibility.
-
+┌───────────────────────────────────────────────────────────────────────────────────┐│                           OPERATIONAL DATA FLOW                                   │├─────────────────────────────────────────┬─────────────────────────────────────────┤│ 🏥 CLINICAL ENTRIES                     │ 📊 ANALYTICAL OUTPUTS                   │├─────────────────────────────────────────┼─────────────────────────────────────────┤│ • Inpatient Admissions & Ward Beds      │ • Length of Stay (LOS) Window Functions ││ • Emergency Visits & OPD Trajectories   │ • Real-time Bed Utilization Ratios      ││ • Surgical Schedules & Doctor Rosters   │ • OPD & Emergency Volume Aggregations   │└─────────────────────────────────────────┴─────────────────────────────────────────┘
 ---
 
-## ✨ Key Features
+## ✨ Core Capabilities
 
-* 🗄️ **3NF Normalized Relational Database:** Enforces strict referential integrity, domain constraints, and primary/foreign key indexing.
-* ⚡ **Advanced Analytical SQL Suite:** Features Window Functions (`ROW_NUMBER`, `DENSE_RANK`, `LAG`/`LEAD`), CTEs, Aggregations, and Dynamic Time-Series Analysis.
-* 📊 **Multi-Page Executive Tableau Dashboard:** Interactive analytical views tailored for clinical operations, bed management, patient demographics, and executive reporting.
-* 🎨 **High-Contrast Dark Theme UI Design:** Customized slate/teal visualization layouts optimized for executive review and operational command centers.
-* 🛡️ **Anonymized Synthetic Data Engine:** Fully compliant data generation pipeline mirroring real-world clinical and administrative distribution metrics.
+* 🗄️ **Normalized Relational Schema (3NF):** Modeled around primary operational entities (`patients`, `doctors`, `wards`, `beds`, `admissions`, `surgeries`, `opd_visits`, `emergency_visits`, and `donations`) with strict foreign key constraints.
+* ⚡ **Analytical SQL Suite:** Queries utilizing Common Table Expressions (CTEs), Aggregations, Conditional Summaries, and Window Functions (`LAG`, `LEAD`, `DENSE_RANK`) for throughput analysis.
+* 📊 **Operational Dashboarding:** Structured SQL aggregations designed for seamless ingestion into Tableau for executive visual reporting.
+* 🛡️ **Anonymized Synthetic Dataset:** Modeled using realistic synthetic data parameters to simulate real-world patient volume without using actual patient health information.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Icon | Domain | Technology / Tool | Usage & Purpose |
+| Icon | Layer | Technology / Tool | Usage & Description |
 | :-: | :--- | :--- | :--- |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="24"/> | **Database Engine** | MySQL Server 8.0+ | Relational data store, staging schemas, and constraint enforcement |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqldeveloper/sqldeveloper-original.svg" width="24"/> | **Data Processing** | SQL (DDL, DML, DQL) | Data transformations, normalization, CTEs, and aggregation logic |
-| <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" width="24"/> | **Business Intelligence** | Tableau Desktop / Public | Interactive dashboarding, dynamic parameters, and visual analytics |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="24"/> | **ETL & Data Prep** | Python / Pandas | Raw data cleansing, exploratory validation, and synthetic data generation |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/markdown/markdown-original.svg" width="24"/> | **Documentation** | Markdown / Mermaid | Schema ERD diagramming and system architecture specifications |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="24"/> | **Database Engine** | MySQL Server 8.0+ | Relational data engine, tables, constraints, and relational indexing |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqldeveloper/sqldeveloper-original.svg" width="24"/> | **Query Language** | SQL (DDL, DML, DQL) | Data definitions, relational integrity rules, CTEs, and window analytics |
+| <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" width="24"/> | **Analytics & BI** | Tableau | Interactive reporting layouts for capacity and patient flow analysis |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/markdown/markdown-original.svg" width="24"/> | **Documentation** | Markdown & Mermaid | Schema ERD visualization and workflow architecture specifications |
 
 ---
 
 ## 🏗 System Architecture
 
-The end-to-end data pipeline transforms transactional operational logs into structured analytical tables, ultimately feeding interactive executive reporting layers.
-
 ```mermaid
 graph TD
-    classDef source fill:#1e293b,stroke:#0f766e,stroke-width:2px,color:#fff;
-    classDef etl fill:#334155,stroke:#14b8a6,stroke-width:2px,color:#fff;
+    classDef raw fill:#1e293b,stroke:#0f766e,stroke-width:2px,color:#fff;
     classDef db fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
-    classDef sql fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff;
+    classDef analytics fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff;
     classDef bi fill:#311b92,stroke:#f59e0b,stroke-width:2px,color:#fff;
 
-    subgraph Data_Ingestion ["📥 1. DATA SOURCE LAYER"]
-        A1[📑 Operational Logs] ::: source
-        A2[👤 Patient Records] ::: source
-        A3[🛏️ Bed Status Logs] ::: source
-        A4[💳 Billing Transactions] ::: source
+    subgraph Data_Sources ["📥 1. TRANSACTIONAL ENTRIES"]
+        A1[👤 Patients & Doctors] ::: raw
+        A2[🛏️ Wards & Bed Allocations] ::: raw
+        A3[🚨 Emergency & OPD Visits] ::: raw
+        A4[🩸 Donations & Surgical Logs] ::: raw
     end
 
-    subgraph Data_Processing ["⚡ 2. STAGING & ETL PROCESSING"]
-        B1[🧹 Raw Data Cleansing & Validation] ::: etl
-        B2[🔄 Type Casting & Null Imputation] ::: etl
+    subgraph Relational_Database ["🗄️ 2. MYSQL 8.0 RELATIONAL ENGINE"]
+        B1[(🏛️ 3NF Normalized Schema)] ::: db
+        B2[🔑 Foreign Key Constraints & Indexes] ::: db
     end
 
-    subgraph Database_Layer ["🗄️ 3. RELATIONAL STORAGE (MySQL 8.0)"]
-        C1[(🏛️ 3NF Normalized Schema)] ::: db
-        C2[🔑 Foreign Key Constraints & Indexing] ::: db
-        C3[👁️ Analytical Stored Views] ::: db
+    subgraph SQL_Analytics ["📊 3. ANALYTICAL QUERY SUITE"]
+        C1[⏱️ Length of Stay CTEs] ::: analytics
+        C2[🏥 Ward Occupancy Metrics] ::: analytics
+        C3[📈 OPD vs Emergency Throughput] ::: analytics
     end
 
-    subgraph Analytics_Engine ["📊 4. ANALYTICAL SQL QUERY ENGINE"]
-        D1[⏱️ Window Functions & Time-Series] ::: sql
-        D2[🏥 Bed Occupancy & LOS Metrics] ::: sql
-        D3[💰 Revenue & Utilization Analysis] ::: sql
+    subgraph Visual_Reporting ["📈 4. DASHBOARD SUITE"]
+        D1[🖥️ Tableau Operational Views] ::: bi
     end
 
-    subgraph Business_Intelligence ["📈 5. EXECUTIVE DASHBOARDS (Tableau)"]
-        E1[🖥️ Operational Overview] ::: bi
-        E2[🛏️ Capacity Management] ::: bi
-        E3[💳 Financial Intelligence] ::: bi
-    end
+    Data_Sources --> Relational_Database
+    Relational_Database --> SQL_Analytics
+    SQL_Analytics --> Visual_Reporting
+📐 Database Schema & Entity RelationshipsThe schema models core healthcare operational workflows across 9 core entities.Code snippeterDiagram
+    PATIENTS ||--o{ ADMISSIONS : "admitted for"
+    PATIENTS ||--o{ OPD_VISITS : "attends"
+    PATIENTS ||--o{ EMERGENCY_VISITS : "presents"
+    PATIENTS ||--o{ SURGERIES : "undergoes"
+    PATIENTS ||--o{ DONATIONS : "contributes"
 
-    Data_Ingestion --> Data_Processing
-    Data_Processing --> Database_Layer
-    Database_Layer --> Analytics_Engine
-    Analytics_Engine --> Business_Intelligence
-📐 Database Schema & Data ModelThe database is built on Third Normal Form (3NF) principles to eliminate data redundancy and preserve transactional integrity across complex healthcare events.Entity Relationship Diagram (ERD)Code snippeterDiagram
-    PATIENTS ||--o{ ADMISSIONS : "makes"
     DOCTORS ||--o{ ADMISSIONS : "attends"
-    DEPARTMENTS ||--o{ DOCTORS : "employs"
-    DEPARTMENTS ||--o{ BED_ALLOCATION : "contains"
-    BED_ALLOCATION ||--o{ ADMISSIONS : "assigned to"
-    ADMISSIONS ||--|| BILLING : "generates"
+    DOCTORS ||--o{ OPD_VISITS : "consults"
+    DOCTORS ||--o{ SURGERIES : "performs"
+
+    WARDS ||--o{ BEDS : "contains"
+    BEDS ||--o{ ADMISSIONS : "assigned to"
 
     PATIENTS {
         int patient_id PK
@@ -167,138 +140,100 @@ graph TD
         int doctor_id PK
         string first_name
         string last_name
-        int department_id FK
         string specialization
+        string contact_number
     }
 
-    DEPARTMENTS {
-        int department_id PK
-        string department_name
-        string floor_level
+    WARDS {
+        int ward_id PK
+        string ward_name
+        string ward_type
+        int capacity
     }
 
-    BED_ALLOCATION {
+    BEDS {
         int bed_id PK
-        int department_id FK
+        int ward_id FK
         string bed_number
-        string bed_type
-        boolean is_occupied
+        string status
     }
 
     ADMISSIONS {
         int admission_id PK
         int patient_id FK
         int doctor_id FK
-        int department_id FK
         int bed_id FK
         datetime admission_date
         datetime discharge_date
         string admission_type
-        string admission_status
     }
 
-    BILLING {
-        int bill_id PK
-        int admission_id FK
-        decimal total_amount
-        decimal insurance_covered
-        decimal patient_payable
-        string payment_status
+    SURGERIES {
+        int surgery_id PK
+        int patient_id FK
+        int doctor_id FK
+        datetime surgery_date
+        string surgery_type
+        string status
     }
-PATIENTS TableColumn NameData TypeConstraintsDescriptionpatient_idINTPRIMARY KEY, AUTO_INCREMENTUnique patient identifierfirst_nameVARCHAR(50)NOT NULLPatient first namelast_nameVARCHAR(50)NOT NULLPatient last namegenderENUM('M', 'F', 'Other')NOT NULLPatient genderdobDATENOT NULLDate of birthcontact_numberVARCHAR(20)UNIQUEContact phone numberADMISSIONS TableColumn NameData TypeConstraintsDescriptionadmission_idINTPRIMARY KEY, AUTO_INCREMENTUnique admission record IDpatient_idINTFOREIGN KEY -> PATIENTSReference to admitted patientdoctor_idINTFOREIGN KEY -> DOCTORSPrimary attending physiciandepartment_idINTFOREIGN KEY -> DEPARTMENTSAdmitting specialty wardbed_idINTFOREIGN KEY -> BEDSAssigned bed locationadmission_dateDATETIMENOT NULLExact timestamp of admissiondischarge_dateDATETIMENULLABLETimestamp of dischargeadmission_typeVARCHAR(20)CHECK'Emergency', 'Elective', 'Urgent'BILLING TableColumn NameData TypeConstraintsDescriptionbill_idINTPRIMARY KEY, AUTO_INCREMENTUnique billing record IDadmission_idINTFOREIGN KEY -> ADMISSIONSCorresponding admissiontotal_amountDECIMAL(10,2)NOT NULLTotal gross invoice amountinsurance_coveredDECIMAL(10,2)DEFAULT 0.00Portion covered by insurancepatient_payableDECIMAL(10,2)NOT NULLDirect patient liabilitypayment_statusENUM'Paid', 'Pending', 'Claimed'Settlement status💻 Advanced SQL AnalyticsThe core analytical pipeline utilizes advanced SQL scripts to compute operational KPIs, track patient stay duration, and analyze hospital capacity.1. Patient Length of Stay (LOS) & Readmission AnalysisCalculates the average Length of Stay in days per department alongside 30-day readmission flags using SQL window functions.SQLWITH RankedAdmissions AS (
-    SELECT 
-        a.patient_id,
-        a.admission_id,
-        a.department_id,
-        a.admission_date,
-        a.discharge_date,
-        DATEDIFF(a.discharge_date, a.admission_date) AS length_of_stay_days,
-        LAG(a.discharge_date) OVER (
-            PARTITION BY a.patient_id 
-            ORDER BY a.admission_date
-        ) AS previous_discharge_date
-    FROM admissions a
-    WHERE a.discharge_date IS NOT NULL
-),
-ReadmissionCalculations AS (
-    SELECT 
-        patient_id,
-        admission_id,
-        department_id,
-        length_of_stay_days,
-        DATEDIFF(admission_date, previous_discharge_date) AS days_since_last_discharge,
-        CASE 
-            WHEN DATEDIFF(admission_date, previous_discharge_date) <= 30 THEN 1 
-            ELSE 0 
-        END AS is_30day_readmission
-    FROM RankedAdmissions
-)
-SELECT 
-    d.department_name,
-    COUNT(rc.admission_id) AS total_admissions,
-    ROUND(AVG(rc.length_of_stay_days), 2) AS avg_los_days,
-    SUM(rc.is_30day_readmission) AS total_30day_readmissions,
-    ROUND((SUM(rc.is_30day_readmission) * 100.0 / COUNT(rc.admission_id)), 2) AS readmission_rate_pct
-FROM ReadmissionCalculations rc
-JOIN departments d ON rc.department_id = d.department_id
-GROUP BY d.department_name
-ORDER BY avg_los_days DESC;
+
+    OPD_VISITS {
+        int opd_id PK
+        int patient_id FK
+        int doctor_id FK
+        datetime visit_date
+        string diagnosis
+    }
+
+    EMERGENCY_VISITS {
+        int emergency_id PK
+        int patient_id FK
+        datetime visit_date
+        string condition_severity
+        string outcome
+    }
+
+    DONATIONS {
+        int donation_id PK
+        int patient_id FK
+        decimal amount
+        date donation_date
+        string donation_type
+    }
+Table NamePrimary KeyKey Foreign KeysPrimary Purposepatientspatient_idNoneCentral demographic index for all individuals receiving caredoctorsdoctor_idNonePhysician registry and clinical specializationswardsward_idNoneHospital care units and overall capacity limitsbedsbed_idward_idInpatient bed inventory and availability stateadmissionsadmission_idpatient_id, doctor_id, bed_idInpatient stay logs with admission/discharge timestampssurgeriessurgery_idpatient_id, doctor_idSurgical procedures, schedule, and completion statusesopd_visitsopd_idpatient_id, doctor_idOutpatient department consultations and diagnosis logsemergency_visitsemergency_idpatient_idUrgent/Emergency intake logs, severity, and outcome trackingdonationsdonation_idpatient_idPhilanthropic financial and material contribution records💻 Advanced SQL AnalyticsSample queries from the analytical suite designed for operational throughput tracking.1. Inpatient Length of Stay (LOS) ComputationUses SQL DATEDIFF and window functions to compute inpatient stay duration per ward.SQLSELECT 
+    w.ward_name,
+    COUNT(a.admission_id) AS total_admissions,
+    ROUND(AVG(DATEDIFF(a.discharge_date, a.admission_date)), 2) AS avg_length_of_stay_days,
+    MAX(DATEDIFF(a.discharge_date, a.admission_date)) AS max_stay_days
+FROM admissions a
+JOIN beds b ON a.bed_id = b.bed_id
+JOIN wards w ON b.ward_id = w.ward_id
+WHERE a.discharge_date IS NOT NULL
+GROUP BY w.ward_name
+ORDER BY avg_length_of_stay_days DESC;
 SQLSELECT 
-    d.department_name,
-    COUNT(b.bed_id) AS total_beds,
-    SUM(CASE WHEN b.is_occupied = 1 THEN 1 ELSE 0 END) AS occupied_beds,
-    SUM(CASE WHEN b.is_occupied = 0 THEN 1 ELSE 0 END) AS available_beds,
-    ROUND((SUM(CASE WHEN b.is_occupied = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(b.bed_id)), 2) AS occupancy_rate_pct,
-    CASE 
-        WHEN (SUM(CASE WHEN b.is_occupied = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(b.bed_id)) >= 85.0 THEN '🚨 CRITICAL OVERCAPACITY'
-        WHEN (SUM(CASE WHEN b.is_occupied = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(b.bed_id)) >= 70.0 THEN '⚠️ HIGH OCCUPANCY'
-        ELSE '✅ OPTIMAL CAPACITY'
-    END AS operational_status
-FROM beds b
-JOIN departments d ON b.department_id = d.department_id
-GROUP BY d.department_name
-ORDER BY occupancy_rate_pct DESC;
+    w.ward_name,
+    w.capacity AS total_capacity,
+    COUNT(b.bed_id) AS total_beds_configured,
+    SUM(CASE WHEN b.status = 'Occupied' THEN 1 ELSE 0 END) AS occupied_beds,
+    ROUND((SUM(CASE WHEN b.status = 'Occupied' THEN 1 ELSE 0 END) * 100.0 / w.capacity), 2) AS ward_occupancy_pct
+FROM wards w
+LEFT JOIN beds b ON w.ward_id = b.ward_id
+GROUP BY w.ward_id, w.ward_name, w.capacity
+ORDER BY ward_occupancy_pct DESC;
 SQLSELECT 
-    d.department_name,
-    COUNT(DISTINCT a.admission_id) AS total_cases,
-    ROUND(SUM(b.total_amount), 2) AS gross_revenue,
-    ROUND(SUM(b.insurance_covered), 2) AS insurance_reimbursements,
-    ROUND(SUM(b.patient_payable), 2) AS out_of_pocket_revenue,
-    ROUND(AVG(b.total_amount), 2) AS avg_revenue_per_patient,
-    DENSE_RANK() OVER (ORDER BY SUM(b.total_amount) DESC) AS revenue_rank
-FROM billing b
-JOIN admissions a ON b.admission_id = a.admission_id
-JOIN departments d ON a.department_id = d.department_id
-WHERE b.payment_status IN ('Paid', 'Claimed')
-GROUP BY d.department_name
-ORDER BY gross_revenue DESC;
-📊 Executive Dashboards & VisualizationsThe platform features a multi-page interactive executive reporting suite created in Tableau Desktop. Designed with a custom dark slate and deep cyan aesthetic, it emphasizes visual clarity, fast scanning, and key metrics.🖼️ Dashboard Preview GalleryExecutive Operations OverviewWard & Capacity ManagementKey KPIs, Monthly Trends & Flow RatesBed Occupancy & Departmental HeatmapsPatient DemographicsFinancial IntelligenceAge Pyramids & Admission Type RatiosRevenue Distribution & Settlement Status📈 Key Business Insights & MetricsThrough analytical SQL modeling and Tableau reporting, key operational insights were uncovered across administrative datasets:🔴 Bed Occupancy Bottlenecks: The Intensive Care Unit (ICU) and Emergency Department consistently operate near 88–92% capacity, exceeding the recommended clinical safety threshold of 85%.⏱️ Length of Stay Variability: Elective surgical cases showed a consistent average LOS of 4.2 days, whereas emergency surgical admissions exhibited high variance (6.8 days avg), indicating pre-op stabilization delays.🕒 Peak Admission Windows: Temporal analysis revealed peak emergency patient intake occurs between 18:00 and 23:00, allowing management to optimize nursing shift allocation.💳 Financial Payor Mix: Insurance claims cover approximately 64% of overall billing value, with direct patient liabilities accounting for 36%, emphasizing the need for streamlined claim clearance workflows.📁 Repository Structureindus-hospital-operations-intelligence/
-├── 📄 README.md                          <- Project documentation & flagship overview
-├── 📂 docs/
-│   ├── 📐 ERD_Diagram.png                <- High-resolution Schema ERD
-│   ├── 📑 Architecture_Overview.pdf      <- Detailed technical design documentation
-│   └── 🖼️ screenshots/                   <- Visual previews for dashboard suite
-│       ├── 01_operations_overview.png
-│       ├── 02_capacity_management.png
-│       ├── 03_patient_demographics.png
-│       └── 04_financial_analytics.png
-├── 📂 sql/
-│   ├── 🏗️ DDL_schema_creation.sql        <- Database schema, tables, and foreign keys
-│   ├── 📥 DML_data_ingestion.sql         <- Synthetic data loading scripts
-│   ├── 📂 analytical_queries/            <- Production SQL queries & CTEs
-│   │   ├── 01_patient_los_analytics.sql
-│   │   ├── 02_bed_occupancy_rates.sql
-│   │   └── 03_financial_revenue_kpis.sql
-│   └── 📂 views/                         <- SQL views engineered for Tableau ingestion
-│       └── create_tableau_views.sql
-├── 📂 data/
-│   ├── 📄 raw/                           <- Unprocessed CSV datasets (Synthetic)
-│   └── 📊 processed/                     <- Cleansed and transformed staging files
-└── 📂 tableau/
-    └── 📈 Indus_Hospital_Operations_Dashboard.twbx <- Interactive Tableau Workbook
-⚡ Installation & Setup GuideFollow these steps to replicate the database, execute analytical SQL scripts, and run the Tableau dashboard locally.Prerequisites🗄️ MySQL Server 8.0+ or MySQL Workbench installed.📊 Tableau Desktop (or Tableau Reader / Tableau Public) to view .twbx workbooks.📦 Git for repository cloning.Step 1: Clone the RepositoryBashgit clone [https://github.com/ma9731501/indus-hospital-operations-intelligence.git](https://github.com/ma9731501/indus-hospital-operations-intelligence.git)
+    condition_severity,
+    outcome,
+    COUNT(emergency_id) AS total_cases,
+    ROUND((COUNT(emergency_id) * 100.0 / (SELECT COUNT(*) FROM emergency_visits)), 2) AS percentage_of_total
+FROM emergency_visits
+GROUP BY condition_severity, outcome
+ORDER BY total_cases DESC;
+📊 Operations Dashboard & VisualizationAnalytical views engineered in SQL are imported into Tableau to present operational visual insights:Inpatient Flow: Admissions trend vs. discharge timelines.Bed Occupancy: Live availability tracking across configured wards.Outpatient & Emergency Intake: Patient volume metrics by department and severity.(Add your dashboard screenshots or Tableau Public links here)⚡ Setup & Execution GuidePrerequisitesMySQL Server 8.0+ or MySQL Workbench installed.Git for repository cloning.1. Clone the RepositoryBashgit clone [https://github.com/m2ammar/indus-hospital-operations-intelligence.git](https://github.com/m2ammar/indus-hospital-operations-intelligence.git)
 cd indus-hospital-operations-intelligence
-Step 2: Initialize Database & SchemaOpen MySQL Workbench or execute via CLI:Bashmysql -u root -p < sql/DDL_schema_creation.sql
-mysql -u root -p < sql/DML_data_ingestion.sql
-Step 3: Create Analytical ViewsExecute the SQL view creation script to prepare data pipelines for Tableau:Bashmysql -u root -p < sql/views/create_tableau_views.sql
-Step 4: Open Tableau DashboardLaunch Tableau Desktop.Open tableau/Indus_Hospital_Operations_Dashboard.twbx.If prompted, update the MySQL connection credentials to point to your local database host (127.0.0.1:3306).🔒 Data Governance & Patient PrivacyIMPORTANT PRIVACY & COMPLIANCE NOTICE:To protect patient privacy and comply with healthcare data protection standards (including HIPAA and local data confidentiality guidelines), no real patient health information (PHI) or proprietary hospital records were used in this project.All records, patient demographics, clinical notes, and financial transactions within this repository were programmatically generated using anonymized synthetic data engines. The synthetic datasets mirror real-world operational distributions, statistical properties, and clinical patterns observed at Indus Hospital & Health Network without exposing sensitive personal data.🙏 Acknowledgements & ContextThis project was engineered as part of a 40-hour intensive data analytics internship program.Special thanks and appreciation to:🏥 Indus Hospital & Health Network (IHHN) — For providing guidance on healthcare operational workflows, hospital administration structures, and clinical reporting parameters.🎓 Karachi School of Business & Leadership (KSBL) — For foundational academic preparation in Data Science and Database Architecture.👨‍💻 Operations & IT Analytics Teams — For introducing domain standards in healthcare metrics, capacity management principles, and inpatient flow optimization.👤 AuthorMuhammad Ammar Saleem🎓 Education: B.S. Computer Science (Data Science Specialization), Karachi School of Business & Leadership (KSBL)💼 Specialization: Database Engineering, SQL Analytics, Business Intelligence & Visual Analytics📧 Email: ma9731501@gmail.com🐙 GitHub: ma9731501📊 Tableau Public: Ammar Saleem Portfolio
+2. Database InitializationRun the SQL scripts in your MySQL client to build the schema and populate initial data:SQL-- Execute schema creation
+SOURCE schema.sql;
+
+-- Execute analytical queries
+SOURCE analytics.sql;
+🔒 Data Privacy & ComplianceData Integrity & Anonymization Note:No real patient health information (PHI) or confidential hospital administrative records were used in this project.All records within this database—including patient demographics, dates, doctor names, and visit histories—were programmatically generated as anonymized synthetic data to model operational healthcare database patterns responsibly.🙏 Internship Context & AcknowledgementsThis project was built independently during a 40-hour data analytics internship, designed to practice database normalization, foreign key constraint management, and analytical SQL modeling on realistic healthcare data structures.👤 AuthorMuhammad Ammar Saleem🎓 Education: B.S. Computer Science (Data Science Specialization), Karachi School of Business & Leadership (KSBL)💼 Focus Areas: Database Engineering, SQL Analytics, Data Pipelines & Business Intelligence📧 Email: ma9731501@gmail.com🐙 GitHub: @m2ammar
