@@ -1,239 +1,133 @@
+# Hospital Analytics Project — Progress Log
+*(Paste this whole file into a new chat to bring Claude back up to speed — memory is currently off in Settings.)*
+
+---
+
+## 🎯 Goal
+Build a full Tableau hospital analytics project (28 KPIs, 4 dashboard pages) as a real portfolio piece — then document it properly (README, GitHub push, website case study, LinkedIn post) so it's defensible in interviews. Deadline: Tableau done by Thursday, documentation Friday.
+
+---
+
+## 🗂 Real Data Tables (confirmed from actual Tableau sidebar — use ONLY these in any README/schema writeup)
+- `patients.csv`
+- `admission.csv`
+- `doctors.csv`
+- `beds.csv`
+- `wards.csv` (referenced via Ward Id in beds.csv)
+- `diseases.csv`
+- `patient_disease.csv`
+- `emergency_visits.csv`
+- `opd_visits_enriched.csv`
+- `surgeries.csv`
+- `donations.csv`
+
+⚠️ Confirm exact field names per table before writing final SQL/README — some abbreviated in screenshots.
+
+---
+
+## 🎨 Design System (locked in, keep consistent across all 28 KPIs)
+- **Background:** pure black (`Format → Shading → Worksheet`)
+- **Label text:** small (~12-14pt), gray, uppercase (e.g. "TOTAL ADMISSIONS")
+- **Number text:** large (~48-60pt), bold, white
+- **Chart fill/bars:** slate/graphite tone — `#3A4149` (primary choice used so far)
+- **Gridlines:** off where possible (some residual lines on one chart couldn't be removed — accepted as-is, not worth more time)
+- **Axis/label text:** light gray or white for readability on black
+
+---
+
+## ✅ KPIs Completed So Far
+
+### Page 1 — Admissions Overview
+1. ✅ Total Admissions — 18,000 (`KPI_Total_Admissions`)
+2. ✅ Total Patients — 12,000 (`Total_Patients`)
+3. ✅ Emergency Visits — 6,000 (`KPI_Emergency_Visits`)
+4. ✅ Visits by Triage Level — Non-urgent 3,309 / Urgent 2,102 / Critical 589 (`Visits_By_Triage`)
+5. ✅ Avg Length of Stay — 4.506 → rounded to 1 decimal (`KPI_Avg_LOS`)
+6. ✅ Admissions Over Time — monthly trend, area chart, Jan 1,447 → Dec 1,509, peak Oct 1,594 (`KPI_Admissions_Over_Time`)
+
+### Page 2 — Doctors & Departments
+7. ✅ Total Doctors (`KPI_Total_Doctors`)
+8. ✅ Surgeon Ratio — 50% (calculated field, see below) (`KPI_Surgeon_Ratio`)
+9. ✅ Avg Experience Years — 17.66 (`KPI_Avg_Experience`)
+10. ✅ Admissions by Department — sorted bar chart: Orthopedics 2,483 (top) → Pulmonology 1,029 (bottom) (`KPI_Admissions_by_Department`)
+11. ✅ Doctor Workload — Top 10 filter applied: Sarah Franklin 130 (top) → Larry Ballard 115 (`KPI_Doctor_Workload`)
+
+### Page 3 — Emergency & OPD (in progress)
+12. 🔲 Emergency Outcomes — next up, bar chart, `Outcome` × CNTD(`Emergency Id`)
+13. 🔲 OPD Visits Total
+14. 🔲 OPD Visits by Department
+15. 🔲 Top Diseases (OPD)
+
+### Page 4 — Surgeries & Donations (not started)
+16. 🔲 Total Surgeries
+17. 🔲 Surgery Success Rate (if outcome/status field exists)
+18. 🔲 Total Donations
+19. 🔲 Donations by Type/Category
+20. 🔲 Bed Occupancy by Ward
+
+*(Remaining KPIs to reach 28 total — to be finalized as each page is built out.)*
+
+---
+
+## 🛠 Tech Stack (confirmed — use these badges in the real README)
+
+Markdown to paste directly into README:
+
+```markdown
 <p align="center">
-  <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/hospital.svg" width="120" height="120" alt="Indus Hospital Operations Logo" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Workbench" />
+  <img src="https://img.shields.io/badge/Tableau_Public-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau Public" />
 </p>
+```
 
-<h1 align="center">🏥 Indus Hospital Operations Intelligence Platform</h1>
+Renders as clean pill-shaped badges (same style as the earlier template, just accurate now):
 
-<p align="center">
-  <strong>End-to-End Healthcare Relational Database Architecture & SQL Analytics Engine</strong>
-</p>
+| Tool | Actual Role in This Project |
+|---|---|
+| **Python (VS Code)** | Generated the synthetic hospital dataset — patients, admissions, doctors, beds, wards, diseases, emergency/OPD visits, surgeries, donations — exported to CSV |
+| **MySQL Workbench** | Used for schema design / querying the relational structure before/alongside the CSV exports (confirm: did you also load the CSVs into MySQL and query them there, or was MySQL used only for schema modeling? — matters for how we word this in the real README) |
+| **Tableau Public** | Built the 28-KPI, 4-page executive dashboard — relationships, calculated fields, styled KPI cards, bar/line/area charts |
 
-<p align="center">
-  A production-grade MySQL database schema and analytical SQL suite built during a 40-hour internship to model clinical workflows, patient flow, ward utilization, and operational capacity.
-</p>
-
-<p align="center">
-  <a href="#-tech-stack">
-    <img src="https://img.shields.io/badge/Database-MySQL_8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  </a>
-  <a href="#-tech-stack">
-    <img src="https://img.shields.io/badge/Language-Advanced_SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" />
-  </a>
-  <a href="#-tech-stack">
-    <img src="https://img.shields.io/badge/Visualization-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
-  </a>
-  <a href="#-tech-stack">
-    <img src="https://img.shields.io/badge/Domain-Healthcare_Data_Engineering-008080?style=for-the-badge&logo=bandcamp&logoColor=white" alt="Healthcare Analytics" />
-  </a>
-  <a href="#-license">
-    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
-  </a>
-</p>
-
-<br />
+⚠️ Note: don't add "MySQL Server 8.0+", "Advanced SQL Analytics" with fake window-function scripts, or any SQL code block unless you actually wrote and ran those queries. Only include real SQL if you can paste the actual `.sql` file content.
 
 ---
 
-## 📋 Table of Contents
-
-- [📌 Project Overview](#-project-overview)
-- [✨ Core Capabilities](#-core-capabilities)
-- [🛠 Tech Stack](#-tech-stack)
-- [🏗 System Architecture](#-system-architecture)
-- [📐 Database Schema & Entity Relationships](#-database-schema--entity-relationships)
-- [💻 Advanced SQL Analytics](#-advanced-sql-analytics)
-- [📊 Operations Dashboard & Visualization](#-operations-dashboard--visualization)
-- [⚡ Setup & Execution Guide](#-setup--execution-guide)
-- [🔒 Data Privacy & Compliance](#-data-privacy--compliance)
-- [🙏 Internship Context & Acknowledgements](#-internship-context--acknowledgements)
-- [👤 Author](#-author)
+## 🧮 Calculated Fields Created
+```
+Surgeon Ratio =
+SUM(IF [Is Surgeon] = 1 THEN 1 ELSE 0 END) / COUNTD([Doctor Id])
+```
+Formatted as percentage, 0 decimal places.
 
 ---
 
-## 📌 Project Overview
+## ⚠️ README — Critical Correction Notes
+An earlier draft README (AI-generated template, not based on real project) was reviewed and rejected for these reasons — **do not reuse any of the following in the final README:**
 
-Healthcare systems face complex operational challenges in tracking patient movement across emergency admissions, outpatient visits, inpatient ward capacity, surgical queues, and donor allocations.
+- ❌ Fabricated schema — tables like `BILLING`, `DEPARTMENTS`, `BED_ALLOCATION` with fields like `insurance_covered`, `payment_status` **do not exist** in the real dataset.
+- ❌ Fabricated statistics — "ICU at 88-92% capacity," "avg LOS 4.2 days," "peak admissions 18:00-23:00," "64% insurance coverage" were never computed from real data.
+- ❌ False claim of hospital partnership — language like "special thanks to Indus Hospital & Health Network for providing guidance on operational workflows" implies a real institutional collaboration that didn't happen. This is the highest-risk item — a recruiter could fact-check this directly.
+- ❌ Wrong contact info / GitHub username / clone URL — all pointed to someone else's repo.
+- ❌ References to files that don't exist (ERD diagrams, `.twbx` exports, view-creation SQL scripts) — only include files actually in the repo.
 
-The **Indus Hospital Operations Intelligence Platform** is a normalized relational database and analytical reporting project developed during a 40-hour internship. The platform models core hospital operations to analyze bed availability, emergency intake patterns, outpatient volume, and patient length of stay across clinical departments.
-
-┌───────────────────────────────────────────────────────────────────────────────────┐│                           OPERATIONAL DATA FLOW                                   │├─────────────────────────────────────────┬─────────────────────────────────────────┤│ 🏥 CLINICAL ENTRIES                     │ 📊 ANALYTICAL OUTPUTS                   │├─────────────────────────────────────────┼─────────────────────────────────────────┤│ • Inpatient Admissions & Ward Beds      │ • Length of Stay (LOS) Window Functions ││ • Emergency Visits & OPD Trajectories   │ • Real-time Bed Utilization Ratios      ││ • Surgical Schedules & Doctor Rosters   │ • OPD & Emergency Volume Aggregations   │└─────────────────────────────────────────┴─────────────────────────────────────────┘
----
-
-## ✨ Core Capabilities
-
-* 🗄️ **Normalized Relational Schema (3NF):** Modeled around primary operational entities (`patients`, `doctors`, `wards`, `beds`, `admissions`, `surgeries`, `opd_visits`, `emergency_visits`, and `donations`) with strict foreign key constraints.
-* ⚡ **Analytical SQL Suite:** Queries utilizing Common Table Expressions (CTEs), Aggregations, Conditional Summaries, and Window Functions (`LAG`, `LEAD`, `DENSE_RANK`) for throughput analysis.
-* 📊 **Operational Dashboarding:** Structured SQL aggregations designed for seamless ingestion into Tableau for executive visual reporting.
-* 🛡️ **Anonymized Synthetic Dataset:** Modeled using realistic synthetic data parameters to simulate real-world patient volume without using actual patient health information.
-
----
-
-## 🛠 Tech Stack
-
-| Icon | Layer | Technology / Tool | Usage & Description |
-| :-: | :--- | :--- | :--- |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="24"/> | **Database Engine** | MySQL Server 8.0+ | Relational data engine, tables, constraints, and relational indexing |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqldeveloper/sqldeveloper-original.svg" width="24"/> | **Query Language** | SQL (DDL, DML, DQL) | Data definitions, relational integrity rules, CTEs, and window analytics |
-| <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" width="24"/> | **Analytics & BI** | Tableau | Interactive reporting layouts for capacity and patient flow analysis |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/markdown/markdown-original.svg" width="24"/> | **Documentation** | Markdown & Mermaid | Schema ERD visualization and workflow architecture specifications |
+**What's worth keeping from that template:** the visual structure — badges, table of contents, mermaid architecture diagram, styled markdown tables. Just rebuild the *content* using:
+- Your actual table/field names (list above)
+- Real KPI numbers you've actually pulled in Tableau (list above)
+- Your real GitHub username/email
+- No claims of hospital partnership — frame it instead as "synthetic dataset modeled on hospital operations data" (accurate and still impressive)
 
 ---
 
-## 🏗 System Architecture
+## 📌 Next Steps
+1. Finish Page 3 (Emergency Outcomes → OPD Visits Total → OPD by Dept → Top Diseases)
+2. Finish Page 4 (Surgeries → Donations → Bed Occupancy)
+3. Assemble all 4 dashboard pages in Tableau's Dashboard view
+4. Friday: write README using only verified real content (this doc is your source of truth)
+5. Push to GitHub with proper repo structure
+6. Publish as case study on personal site
+7. Post on LinkedIn
 
-```mermaid
-graph TD
-    classDef raw fill:#1e293b,stroke:#0f766e,stroke-width:2px,color:#fff;
-    classDef db fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff;
-    classDef analytics fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff;
-    classDef bi fill:#311b92,stroke:#f59e0b,stroke-width:2px,color:#fff;
-
-    subgraph Data_Sources ["📥 1. TRANSACTIONAL ENTRIES"]
-        A1[👤 Patients & Doctors] ::: raw
-        A2[🛏️ Wards & Bed Allocations] ::: raw
-        A3[🚨 Emergency & OPD Visits] ::: raw
-        A4[🩸 Donations & Surgical Logs] ::: raw
-    end
-
-    subgraph Relational_Database ["🗄️ 2. MYSQL 8.0 RELATIONAL ENGINE"]
-        B1[(🏛️ 3NF Normalized Schema)] ::: db
-        B2[🔑 Foreign Key Constraints & Indexes] ::: db
-    end
-
-    subgraph SQL_Analytics ["📊 3. ANALYTICAL QUERY SUITE"]
-        C1[⏱️ Length of Stay CTEs] ::: analytics
-        C2[🏥 Ward Occupancy Metrics] ::: analytics
-        C3[📈 OPD vs Emergency Throughput] ::: analytics
-    end
-
-    subgraph Visual_Reporting ["📈 4. DASHBOARD SUITE"]
-        D1[🖥️ Tableau Operational Views] ::: bi
-    end
-
-    Data_Sources --> Relational_Database
-    Relational_Database --> SQL_Analytics
-    SQL_Analytics --> Visual_Reporting
-📐 Database Schema & Entity RelationshipsThe schema models core healthcare operational workflows across 9 core entities.Code snippeterDiagram
-    PATIENTS ||--o{ ADMISSIONS : "admitted for"
-    PATIENTS ||--o{ OPD_VISITS : "attends"
-    PATIENTS ||--o{ EMERGENCY_VISITS : "presents"
-    PATIENTS ||--o{ SURGERIES : "undergoes"
-    PATIENTS ||--o{ DONATIONS : "contributes"
-
-    DOCTORS ||--o{ ADMISSIONS : "attends"
-    DOCTORS ||--o{ OPD_VISITS : "consults"
-    DOCTORS ||--o{ SURGERIES : "performs"
-
-    WARDS ||--o{ BEDS : "contains"
-    BEDS ||--o{ ADMISSIONS : "assigned to"
-
-    PATIENTS {
-        int patient_id PK
-        string first_name
-        string last_name
-        string gender
-        date dob
-        string contact_number
-    }
-
-    DOCTORS {
-        int doctor_id PK
-        string first_name
-        string last_name
-        string specialization
-        string contact_number
-    }
-
-    WARDS {
-        int ward_id PK
-        string ward_name
-        string ward_type
-        int capacity
-    }
-
-    BEDS {
-        int bed_id PK
-        int ward_id FK
-        string bed_number
-        string status
-    }
-
-    ADMISSIONS {
-        int admission_id PK
-        int patient_id FK
-        int doctor_id FK
-        int bed_id FK
-        datetime admission_date
-        datetime discharge_date
-        string admission_type
-    }
-
-    SURGERIES {
-        int surgery_id PK
-        int patient_id FK
-        int doctor_id FK
-        datetime surgery_date
-        string surgery_type
-        string status
-    }
-
-    OPD_VISITS {
-        int opd_id PK
-        int patient_id FK
-        int doctor_id FK
-        datetime visit_date
-        string diagnosis
-    }
-
-    EMERGENCY_VISITS {
-        int emergency_id PK
-        int patient_id FK
-        datetime visit_date
-        string condition_severity
-        string outcome
-    }
-
-    DONATIONS {
-        int donation_id PK
-        int patient_id FK
-        decimal amount
-        date donation_date
-        string donation_type
-    }
-Table NamePrimary KeyKey Foreign KeysPrimary Purposepatientspatient_idNoneCentral demographic index for all individuals receiving caredoctorsdoctor_idNonePhysician registry and clinical specializationswardsward_idNoneHospital care units and overall capacity limitsbedsbed_idward_idInpatient bed inventory and availability stateadmissionsadmission_idpatient_id, doctor_id, bed_idInpatient stay logs with admission/discharge timestampssurgeriessurgery_idpatient_id, doctor_idSurgical procedures, schedule, and completion statusesopd_visitsopd_idpatient_id, doctor_idOutpatient department consultations and diagnosis logsemergency_visitsemergency_idpatient_idUrgent/Emergency intake logs, severity, and outcome trackingdonationsdonation_idpatient_idPhilanthropic financial and material contribution records💻 Advanced SQL AnalyticsSample queries from the analytical suite designed for operational throughput tracking.1. Inpatient Length of Stay (LOS) ComputationUses SQL DATEDIFF and window functions to compute inpatient stay duration per ward.SQLSELECT 
-    w.ward_name,
-    COUNT(a.admission_id) AS total_admissions,
-    ROUND(AVG(DATEDIFF(a.discharge_date, a.admission_date)), 2) AS avg_length_of_stay_days,
-    MAX(DATEDIFF(a.discharge_date, a.admission_date)) AS max_stay_days
-FROM admissions a
-JOIN beds b ON a.bed_id = b.bed_id
-JOIN wards w ON b.ward_id = w.ward_id
-WHERE a.discharge_date IS NOT NULL
-GROUP BY w.ward_name
-ORDER BY avg_length_of_stay_days DESC;
-SQLSELECT 
-    w.ward_name,
-    w.capacity AS total_capacity,
-    COUNT(b.bed_id) AS total_beds_configured,
-    SUM(CASE WHEN b.status = 'Occupied' THEN 1 ELSE 0 END) AS occupied_beds,
-    ROUND((SUM(CASE WHEN b.status = 'Occupied' THEN 1 ELSE 0 END) * 100.0 / w.capacity), 2) AS ward_occupancy_pct
-FROM wards w
-LEFT JOIN beds b ON w.ward_id = b.ward_id
-GROUP BY w.ward_id, w.ward_name, w.capacity
-ORDER BY ward_occupancy_pct DESC;
-SQLSELECT 
-    condition_severity,
-    outcome,
-    COUNT(emergency_id) AS total_cases,
-    ROUND((COUNT(emergency_id) * 100.0 / (SELECT COUNT(*) FROM emergency_visits)), 2) AS percentage_of_total
-FROM emergency_visits
-GROUP BY condition_severity, outcome
-ORDER BY total_cases DESC;
-📊 Operations Dashboard & VisualizationAnalytical views engineered in SQL are imported into Tableau to present operational visual insights:Inpatient Flow: Admissions trend vs. discharge timelines.Bed Occupancy: Live availability tracking across configured wards.Outpatient & Emergency Intake: Patient volume metrics by department and severity.(Add your dashboard screenshots or Tableau Public links here)⚡ Setup & Execution GuidePrerequisitesMySQL Server 8.0+ or MySQL Workbench installed.Git for repository cloning.1. Clone the RepositoryBashgit clone [https://github.com/m2ammar/indus-hospital-operations-intelligence.git](https://github.com/m2ammar/indus-hospital-operations-intelligence.git)
-cd indus-hospital-operations-intelligence
-2. Database InitializationRun the SQL scripts in your MySQL client to build the schema and populate initial data:SQL-- Execute schema creation
-SOURCE schema.sql;
-
--- Execute analytical queries
-SOURCE analytics.sql;
-🔒 Data Privacy & ComplianceData Integrity & Anonymization Note:No real patient health information (PHI) or confidential hospital administrative records were used in this project.All records within this database—including patient demographics, dates, doctor names, and visit histories—were programmatically generated as anonymized synthetic data to model operational healthcare database patterns responsibly.🙏 Internship Context & AcknowledgementsThis project was built independently during a 40-hour data analytics internship, designed to practice database normalization, foreign key constraint management, and analytical SQL modeling on realistic healthcare data structures.👤 AuthorMuhammad Ammar Saleem🎓 Education: B.S. Computer Science (Data Science Specialization), Karachi School of Business & Leadership (KSBL)💼 Focus Areas: Database Engineering, SQL Analytics, Data Pipelines & Business Intelligence📧 Email: ma9731501@gmail.com🐙 GitHub: @m2ammar
+---
+*Last updated: mid-build, Page 2 complete, starting Page 3.*
