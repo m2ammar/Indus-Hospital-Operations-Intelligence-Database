@@ -21,7 +21,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://www.svgrepo.com/show/354428/tableau-icon.svg" width="45" alt="Tableau"/>
 <br><br>
-<sub>MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau Public</sub>
+<sub>MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau&nbsp;Public</sub>
 </td>
 
 <td align="center" width="33%">
