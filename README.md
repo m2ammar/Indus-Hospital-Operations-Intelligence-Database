@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![First Internship](https://img.shields.io/badge/First%20Internship-Indus%20Hospital-purple?style=for-the-badge)
 ![Tables](https://img.shields.io/badge/Tables-11-blue?style=for-the-badge)
-![KPIs](https://img.shields.io/badge/KPI%20Queries-28-orange?style=for-the-badge)
+![KPIs](https://img.shields.io/badge/KPI%20Queries-23-orange?style=for-the-badge)
 
 ---
 
@@ -52,7 +52,7 @@
 | Tool | What it was used for |
 |---|---|
 | 🐍 **Python** (VS Code) | Generated the synthetic dataset — `generate_core.py`, `generate_emergency.py`, `generate_opd.py`, `generate_surgeries.py` |
-| 🗄️ **MySQL** | Schema design, normalization (3NF), and the 28 KPI analytical queries |
+| 🗄️ **MySQL** | Schema design, normalization (3NF), and the 23 KPI analytical queries |
 | 📤 **CSV** | Export/import bridge — cleaned MySQL data exported to CSV, then imported into Tableau Public |
 | 📊 **Tableau Public** | Built the 4-page relational dashboard (no live MySQL connection, CSV-only) |
 | 🌐 **Git & GitHub** | Version control and portfolio hosting |
