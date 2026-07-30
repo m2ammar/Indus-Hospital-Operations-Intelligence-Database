@@ -14,37 +14,42 @@
 <table>
 <tr>
 
-<td align="center" width="220">
+<td align="center" width="33%">
 
 <b>🗄️ DATABASES & BI</b>
 
 <br><br>
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-     width="50" alt="MySQL"/>
-<br/>MySQL
+     width="52" alt="MySQL"/>
 
-<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 <img src="https://www.svgrepo.com/show/354428/tableau-icon.svg"
      width="58" alt="Tableau"/>
-<br/>Tableau Public
+
+<br>
+
+MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau Public
 
 </td>
 
-<td align="center" width="220">
+<td align="center" width="33%">
 
 <b>🐍 LANGUAGES</b>
 
 <br><br>
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-     width="50" alt="Python"/>
-<br/>Python
+     width="56" alt="Python"/>
+
+<br>
+
+Python
 
 </td>
 
-<td align="center" width="220">
+<td align="center" width="34%">
 
 <b>⚙️ ENVIRONMENT & GIT</b>
 
@@ -52,12 +57,20 @@
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
      width="48" alt="VS Code"/>
+
+&nbsp;
+
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
      width="48" alt="Git"/>
+
+&nbsp;
+
 <img src="https://cdn.simpleicons.org/github/white"
      width="48" alt="GitHub"/>
 
-<br/>VS Code · Git · GitHub
+<br>
+
+VS Code &nbsp;•&nbsp; Git &nbsp;•&nbsp; GitHub
 
 </td>
 
@@ -181,12 +194,11 @@ Indus-Hospital-Operations-Intelligence-Database/
 ├── data/
 │   ├── raw/                    <- original synthetic CSVs
 │   └── tableau/                <- cleaned CSVs exported for Tableau
-└── docs/
-    └── screenshots/
+└── screenshots/
         ├── Executive_Overview.png
         ├── Patient_Demographics.png
-        ├── OPD_Emergency.png
-        └── Surgery_Donation.png
+        ├── OPD_&_Emergency.png
+        └── Surgery_&_Donation.png
 ```
 
 ---
