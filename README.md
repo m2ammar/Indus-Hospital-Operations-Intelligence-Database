@@ -1,6 +1,6 @@
 # 🏥 Indus Hospital Operations Intelligence Database
 
-> **My first internship project** — a relational healthcare database, 28 SQL KPI queries, and a 4-page executive Tableau dashboard, built during a 40-hour IT internship at Indus Hospital.
+> **My first internship project** — a relational healthcare database, 23 SQL KPI queries, and a 4-page executive Tableau dashboard, built during a 40-hour IT internship at Indus Hospital.
 
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![First Internship](https://img.shields.io/badge/First%20Internship-Indus%20Hospital-purple?style=for-the-badge)
@@ -11,14 +11,39 @@
 
 ## 🧰 Tools Used
 
-<p>
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tableau%20Public-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSV-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git%20%26%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-</p>
+<table>
+<tr>
+<td align="center" width="220">
+
+**🗄️ DATABASES & BI**
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="50" height="50" alt="MySQL"/>
+<br/>MySQL
+<br/><br/>
+<img src="https://cdn.simpleicons.org/tableau/E97627" width="50" height="50" alt="Tableau Public"/>
+<br/>Tableau Public
+
+</td>
+<td align="center" width="220">
+
+**🐍 LANGUAGES**
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="50" height="50" alt="Python"/>
+<br/>Python
+
+</td>
+<td align="center" width="220">
+
+**⚙️ ENVIRONMENT & GIT**
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="50" height="50" alt="VS Code"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="50" height="50" alt="Git"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub"/>
+<br/>VS Code · Git · GitHub
+
+</td>
+</tr>
+</table>
 
 | Tool | What it was used for |
 |---|---|
@@ -189,13 +214,16 @@ This being my first internship, this project was also my first time taking somet
 ## 👤 Author
 
 **Muhammad Ammar Saleem**
+
 🎓 BSCS – Data Science, Karachi School of Business & Leadership (KSBL)
+
 🐙 GitHub: [m2ammar](https://github.com/m2ammar)
 
 ---
 
-<div align="center">
-
-**Python • MySQL • SQL Analytics • Tableau**
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL%20Analytics-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
+</p>
