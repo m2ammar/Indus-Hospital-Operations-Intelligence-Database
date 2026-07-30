@@ -12,39 +12,39 @@
 ## 🧰 Tools Used
 
 <table width="100%">
-  <tr valign="middle">
+<tr>
 
-    <!-- DATABASES & BI -->
-    <td align="center" width="33%">
-      <b>🗄️ DATABASES & BI</b><br><br>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="45" alt="MySQL"/>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <img src="https://www.svgrepo.com/show/354428/tableau-icon.svg" width="45" alt="Tableau"/>
-      <br><br>
-      MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau Public
-    </td>
+<td align="center" width="33%">
+<b>🗄️ DATABASES & BI</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="45" alt="MySQL"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://www.svgrepo.com/show/354428/tableau-icon.svg" width="45" alt="Tableau"/>
+<br><br>
+<sub>MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau Public</sub>
+</td>
 
-    <!-- LANGUAGES -->
-    <td align="center" width="33%">
-      <b>🐍 LANGUAGES</b><br><br>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="45" alt="Python"/>
-      <br><br>
-      Python
-    </td>
+<td align="center" width="33%">
+<b>🐍 LANGUAGES</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="45" alt="Python"/>
+<br><br>
+<sub>Python</sub>
+</td>
 
-    <!-- ENVIRONMENT & GIT -->
-    <td align="center" width="34%">
-      <b>⚙️ ENVIRONMENT & GIT</b><br><br>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40" alt="VS Code"/>
-      &nbsp;&nbsp;
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" alt="Git"/>
-      &nbsp;&nbsp;
-      <img src="https://cdn.simpleicons.org/github/white" width="40" alt="GitHub"/>
-      <br><br>
-      VS Code &nbsp;•&nbsp; Git &nbsp;•&nbsp; GitHub
-    </td>
+<td align="center" width="34%">
+<b>⚙️ ENVIRONMENT & GIT</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="38" alt="VS Code"/>
+&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="38" alt="Git"/>
+&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/github/white" width="38" alt="GitHub"/>
+<br><br>
+<sub>VS Code &nbsp;•&nbsp; Git &nbsp;•&nbsp; GitHub</sub>
+</td>
 
-  </tr>
+</tr>
 </table>
 
 ---
