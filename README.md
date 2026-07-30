@@ -90,7 +90,7 @@ This was my **first internship** — my first time taking a project from raw sch
 flowchart LR
     A[Python Scripts] --> B[Synthetic Dataset]
     B --> C[MySQL Schema<br/>11 Tables, 3NF]
-    C --> D[28 KPI Queries]
+    C --> D[23 KPI Queries]
     C --> E[Cleaned CSV Export]
     E --> F[Tableau Public<br/>Relationship Model]
     F --> G[4-Page Executive Dashboard]
@@ -122,6 +122,10 @@ erDiagram
 **Tables:** `patients`, `admission`, `doctors`, `wards`, `beds`, `emergency_visits`, `opd_visits` (enriched with disease name), `patient_disease`, `diseases`, `surgeries`, `donations`
 
 `donations` has no shared key with the rest of the schema and is kept as an independent Tableau data source rather than joined into the main model.
+
+**Reverse-engineered schema (MySQL Workbench):**
+
+![Indus Hospital ER Diagram](screenshots/indus_hospital_ER.png)
 
 ---
 
