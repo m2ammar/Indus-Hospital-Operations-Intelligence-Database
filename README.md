@@ -111,12 +111,12 @@ Gender split (7,241 Male / 4,759 Female), age group distribution, insurance stat
 ### 🚑 3. OPD & Emergency
 OPD Follow-up Rate (30.0%), visit outcomes (4,270 Treated & Discharged, 1,323 Admitted, 407 Referred), emergency triage levels (Non-urgent 3,309 / Urgent 2,102 / Critical 589), doctor workload, and top diagnosed diseases.
 
-![OPD & Emergency](screenshots/OPD_Emergency.png)
+![OPD & Emergency](screenshots/OPD_&_Emergency.png)
 
 ### ❤️ 4. Surgeries & Donations
 Surgery status (3,196 Completed, 480 Cancelled, 324 Postponed) and department breakdown (Pediatrics leads at 771), alongside donation totals by campaign (Cardiac Care tops at $9.3M) and a 25.2% Recurring Donor Rate.
 
-![Surgeries & Donations](screenshots/Surgery_Donation.png)
+![Surgeries & Donations](screenshots/Surgery_&_Donation.png)
 
 ---
 
