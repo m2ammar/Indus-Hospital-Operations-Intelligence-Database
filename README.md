@@ -15,31 +15,49 @@
 <tr>
 <td align="center" width="220">
 
-**🗄️ DATABASES & BI**
+<b>🗄️ DATABASES & BI</b>
 
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="50" height="50" alt="MySQL"/>
+<br><br>
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+     width="50" height="50" alt="MySQL"/>
 <br/>MySQL
-<br/><br/>
+
+<br><br>
+
 <img src="https://www.svgrepo.com/show/354428/tableau-icon.svg"
-     width="50" height="50" alt="Tableau"/>
+     width="64" height="64" alt="Tableau"/>
 <br/>Tableau Public
 
 </td>
+
 <td align="center" width="220">
 
-**🐍 LANGUAGES**
+<b>🐍 LANGUAGES</b>
 
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="50" height="50" alt="Python"/>
+<br><br>
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+     width="50" height="50" alt="Python"/>
 <br/>Python
 
 </td>
+
 <td align="center" width="220">
 
-**⚙️ ENVIRONMENT & GIT**
+<b>⚙️ ENVIRONMENT & GIT</b>
 
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="50" height="50" alt="VS Code"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="50" height="50" alt="Git"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub"/>
+<br><br>
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
+     width="50" height="50" alt="VS Code"/>
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+     width="50" height="50" alt="Git"/>
+
+<img src="https://cdn.simpleicons.org/github/white"
+     width="56" height="56" alt="GitHub"/>
+
 <br/>VS Code · Git · GitHub
 
 </td>
