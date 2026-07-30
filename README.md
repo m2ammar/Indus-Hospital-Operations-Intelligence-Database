@@ -61,7 +61,7 @@
 
 ## 🌟 Overview
 
-This project models hospital operations end-to-end: a normalized **MySQL schema** (11 tables), **28 KPI queries**, and a **4-page Tableau dashboard** covering executive metrics, patient demographics, OPD/emergency activity, and surgeries/donations.
+This project models hospital operations end-to-end: a normalized **MySQL schema** (11 tables), **23 KPI queries**, and a **4-page Tableau dashboard** covering executive metrics, patient demographics, OPD/emergency activity, and surgeries/donations.
 
 > **Note:** All data is synthetic, generated with Python for this project. No real patient records or hospital data were used.
 
@@ -78,7 +78,7 @@ This was my **first internship** — my first time taking a project from raw sch
 | Total Admissions | 18,000 |
 | Emergency Visits | 6,000 |
 | Total Doctors | 180 |
-| KPI Queries | 28 |
+| KPI Queries | 23 |
 | Dashboard Pages | 4 |
 | Avg. Length of Stay | 4.5 days |
 
