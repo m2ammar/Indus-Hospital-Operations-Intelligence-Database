@@ -13,15 +13,15 @@
 
 <table width="100%">
 <tr>
-    
+
 <td align="center" width="33%">
-  <b>🗄️ DATABASES & BI</b>
-  <br><br>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="45" alt="MySQL"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://www.svgrepo.com/show/354428/tableau-icon.svg" width="45" alt="Tableau"/>
-  <br><br>
-  <sub>MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau&nbsp;Public</sub>
+<b>🗄️ DATABASES & BI</b>
+<br><br>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="45" alt="MySQL"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://www.svgrepo.com/show/354428/tableau-icon.svg" width="45" alt="Tableau"/>
+<br><br>
+<sub>MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau&nbsp;Public</sub>
 </td>
 
 <td align="center" width="33%">
