@@ -13,6 +13,7 @@
 
 <table>
 <tr>
+
 <td align="center" width="220">
 
 <b>🗄️ DATABASES & BI</b>
@@ -20,13 +21,13 @@
 <br><br>
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-     width="50" height="50" alt="MySQL"/>
+     width="50" alt="MySQL"/>
 <br/>MySQL
 
-<br><br>
+<br/>
 
 <img src="https://www.svgrepo.com/show/354428/tableau-icon.svg"
-     width="64" height="64" alt="Tableau"/>
+     width="58" alt="Tableau"/>
 <br/>Tableau Public
 
 </td>
@@ -38,7 +39,7 @@
 <br><br>
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-     width="50" height="50" alt="Python"/>
+     width="50" alt="Python"/>
 <br/>Python
 
 </td>
@@ -50,19 +51,20 @@
 <br><br>
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
-     width="50" height="50" alt="VS Code"/>
-
+     width="48" alt="VS Code"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-     width="50" height="50" alt="Git"/>
-
+     width="48" alt="Git"/>
 <img src="https://cdn.simpleicons.org/github/white"
-     width="56" height="56" alt="GitHub"/>
+     width="48" alt="GitHub"/>
 
 <br/>VS Code · Git · GitHub
 
 </td>
+
 </tr>
 </table>
+
+---
 
 | Tool | What it was used for |
 |---|---|
