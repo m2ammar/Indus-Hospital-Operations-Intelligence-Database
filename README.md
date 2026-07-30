@@ -12,46 +12,46 @@
 ## 🧰 Tools Used
 
 <table>
-<tr>
+<tr valign="top">
 
+<!-- DATABASES & BI -->
 <td align="center" width="33%">
-
 <b>🗄️ DATABASES & BI</b>
-
 <br><br>
-
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-     width="52" alt="MySQL"/>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://www.svgrepo.com/show/354428/tableau-icon.svg"
-     width="58" alt="Tableau"/>
-<br>
-MySQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tableau Public
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="52" alt="MySQL"/></td>
+<td align="center"><img src="https://www.svgrepo.com/show/354428/tableau-icon.svg" width="58" alt="Tableau"/></td>
+</tr>
+<tr valign="top">
+<td align="center">MySQL</td>
+<td align="center">Tableau<br>Public</td>
+</tr>
+</table>
 </td>
+
+<!-- LANGUAGES -->
 <td align="center" width="33%">
 <b>🐍 LANGUAGES</b>
 <br><br>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-     width="56" alt="Python"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="56" alt="Python"/>
 <br>
 Python
 </td>
+
+<!-- ENVIRONMENT & GIT -->
 <td align="center" width="34%">
 <b>⚙️ ENVIRONMENT & GIT</b>
-
 <br><br>
-
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
-     width="48" alt="VS Code"/>
-&nbsp;
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
-     width="48" alt="Git"/>
-&nbsp;
-<img src="https://cdn.simpleicons.org/github/white"
-     width="48" alt="GitHub"/>
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="48" alt="VS Code"/></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="48" alt="Git"/></td>
+</tr>
+</table>
+<img src="https://cdn.simpleicons.org/github/white" width="48" alt="GitHub"/>
 <br>
-VS Code &nbsp;•&nbsp; Git &nbsp;•&nbsp; GitHub
-
+VS Code &nbsp;•&nbsp; Git &nbsp;•<br>GitHub
 </td>
 
 </tr>
