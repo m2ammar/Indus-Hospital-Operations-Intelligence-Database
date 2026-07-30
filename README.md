@@ -20,7 +20,8 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="50" height="50" alt="MySQL"/>
 <br/>MySQL
 <br/><br/>
-<img src="https://cdn.simpleicons.org/tableau/E97627" width="50" height="50" alt="Tableau Public"/>
+<img src="https://www.svgrepo.com/show/354428/tableau-icon.svg"
+     width="50" height="50" alt="Tableau"/>
 <br/>Tableau Public
 
 </td>
