@@ -126,6 +126,7 @@ erDiagram
 **Reverse-engineered schema (MySQL Workbench):**
 
 ![Indus Hospital ER Diagram](screenshots/indus_hospital_ER.png)
+![Indus Hospital ER_2 Diagram](screenshots/indus_hospital_ER_2.png)
 
 ---
 
