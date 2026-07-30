@@ -101,22 +101,22 @@ erDiagram
 ### 🏥 1. Executive Overview
 Total Patients (12,000), Total Admissions (18,000), Emergency Visits (6,000), Total Doctors (180), Avg. Length of Stay (4.5 days), Avg. Doctor Experience (17.66 yrs), Surgeon Ratio (50%), monthly admission trend, and admissions by department (Orthopedics leads at 2,483).
 
-![Executive Overview](docs/screenshots/Executive_Overview.png)
+![Executive Overview](screenshots/Executive_Overview.png)
 
 ### 👥 2. Patient Demographics
 Gender split (7,241 Male / 4,759 Female), age group distribution, insurance status (7,179 Uninsured / 2,396 Insured / 2,425 Not Recorded), and geographic distribution by city.
 
-![Patient Demographics](docs/screenshots/Patient_Demographics.png)
+![Patient Demographics](screenshots/Patient_Demographics.png)
 
 ### 🚑 3. OPD & Emergency
 OPD Follow-up Rate (30.0%), visit outcomes (4,270 Treated & Discharged, 1,323 Admitted, 407 Referred), emergency triage levels (Non-urgent 3,309 / Urgent 2,102 / Critical 589), doctor workload, and top diagnosed diseases.
 
-![OPD & Emergency](docs/screenshots/OPD_Emergency.png)
+![OPD & Emergency](screenshots/OPD_Emergency.png)
 
 ### ❤️ 4. Surgeries & Donations
 Surgery status (3,196 Completed, 480 Cancelled, 324 Postponed) and department breakdown (Pediatrics leads at 771), alongside donation totals by campaign (Cardiac Care tops at $9.3M) and a 25.2% Recurring Donor Rate.
 
-![Surgeries & Donations](docs/screenshots/Surgery_Donation.png)
+![Surgeries & Donations](screenshots/Surgery_Donation.png)
 
 ---
 
