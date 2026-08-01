@@ -173,7 +173,9 @@ Indus-Hospital-Operations-Intelligence-Database/
         ├── Executive_Overview.png
         ├── Patient_Demographics.png
         ├── OPD_&_Emergency.png
-        └── Surgery_&_Donation.png
+        ├── Surgery_&_Donation.png
+        ├── indus_hospital_ER.png
+        └── indus_hospital_ER_2.png
 ```
 
 ---
